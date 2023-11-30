@@ -1,4 +1,7 @@
 # Testing-Automation
+
+# En este repositorio se cargaran los Casos de Prueba correspondiente al Trabajo integrador - Provinciano
+
 # Instrucciones para configurar el entorno virtual y la instalación de módulos
 
 Este archivo proporciona instrucciones paso a paso para configurar un entorno virtual utilizando virtualenv y para instalar los módulos necesarios desde un archivo requirements.txt.
