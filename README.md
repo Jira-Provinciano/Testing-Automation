@@ -24,7 +24,7 @@ venv\Scripts\activate
 Con el entorno virtual activado, usa el siguiente comando para instalar los módulos necesarios desde el archivo requirements.txt:
 pip install -r requirements.txt
 
-# Paso 4: Desactivar el entorno virtual
+# Paso 4: Desactivar el entorno virtual (opcional)
 Cuando hayas terminado de trabajar en tu proyecto, puedes desactivar el entorno virtual ejecutando el siguiente comando:
 deactivate
 
