@@ -46,14 +46,14 @@ def test_region(driver):
     for indice in range(0,len(expected_element)):
         if opciones[indice] != expected_element[indice]:
             dif = False
+    print(opciones)
     assert dif == True, f"La lista de opciones '{element}'. No coincide con el orden esperado'"
         
 def test_nombre(driver):
     input = driver.find_element(By.XPATH,"//body/div/form/input[@id='input']")    
     input_now = input.get_attribute("value")
     expected_input = ""
-    if input_now == expected_input:
-        print('True')
+    print('Filtro Nombre: None')
     assert input_now == expected_input, f"El filtro nombre no se encuentra vacio por defecto"
 
 #x = driver()
