@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import Select
 def driver():
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
-    driver.get("https://nahual.github.io/qc-provinciano-evolution/provinciano.html?v=1")
+    driver.get("https://nahual.github.io/qc-provinciano-evolution/provinciano.html?v=2")
     #return driver
     yield driver
     driver.quit()
@@ -19,7 +19,7 @@ def driver():
 def test_title(driver):
     heading1 = driver.find_element(By.XPATH, '/html/body/h1').text
     print(heading1)
-    expected_title = "Provinciano"
+    expected_title = "Provinciano Evolution"
     assert heading1 == expected_title, f"El título actual '{heading1}' no coincide con el esperado '{expected_title}'"
 
 def test_subtitle(driver):
