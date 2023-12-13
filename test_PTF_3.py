@@ -15,7 +15,7 @@ from unidecode import unidecode
 def driver():
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
-    driver.get("https://nahual.github.io/qc-provinciano-evolution/provinciano.html?v=2")
+    driver.get("https://nahual.github.io/qc-provinciano-evolution/provinciano.html")
     #return driver
     yield driver
     driver.quit()
