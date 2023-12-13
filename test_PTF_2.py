@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import Select
 def driver():
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
-    driver.get("https://nahual.github.io/qc-provinciano-evolution/provinciano.html?v=1")
+    driver.get("https://nahual.github.io/qc-provinciano-evolution/provinciano.html")
     #return driver
     yield driver
     driver.quit()
@@ -19,7 +19,7 @@ def driver():
 def test_title(driver):
     heading1 = driver.find_element(By.XPATH, '/html/body/h1').text
     print(heading1)
-    expected_title = "Provinciano"
+    expected_title = "Provinciano Evolution"
     assert heading1 == expected_title, f"El título actual '{heading1}' no coincide con el esperado '{expected_title}'"
 
 def test_subtitle(driver):
@@ -46,14 +46,14 @@ def test_region(driver):
     for indice in range(0,len(expected_element)):
         if opciones[indice] != expected_element[indice]:
             dif = False
+    print(opciones)
     assert dif == True, f"La lista de opciones '{element}'. No coincide con el orden esperado'"
         
 def test_nombre(driver):
     input = driver.find_element(By.XPATH,"//body/div/form/input[@id='input']")    
     input_now = input.get_attribute("value")
     expected_input = ""
-    if input_now == expected_input:
-        print('True')
+    print('Filtro Nombre: None')
     assert input_now == expected_input, f"El filtro nombre no se encuentra vacio por defecto"
 
 #x = driver()
