@@ -28,12 +28,12 @@ pip install -r requirements.txt
 Cuando hayas terminado de trabajar en tu proyecto, puedes desactivar el entorno virtual ejecutando el siguiente comando:
 deactivate
 
-##Ejecutar las pruebas
+# Ejecutar las pruebas
 Para ejecutar las pruebas y generar un informe HTML, utiliza el siguiente comando
 
 pytest -v --html=report.html
 
 Este comando ejecutará todas las pruebas en el directorio actual, proporcionará información detallada con la opción -v y generará un informe en formato HTML llamado report.html.
 
-##Visualizar el informe
+## Visualizar el informe
 Después de ejecutar las pruebas, abre el archivo report.html en un navegador web para visualizar el informe detallado de las pruebas.
